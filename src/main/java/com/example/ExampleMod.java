@@ -2,7 +2,9 @@ package com.example;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
+import net.minecraft.block.Block;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -23,7 +25,7 @@ public class ExampleMod implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(ModID);
 
 	
-
+	//Glow Stick
 	public static final EntityType<GlowStickEntity> GlowStickEntityType = Registry.register(
 		Registries.ENTITY_TYPE,
 		new Identifier(ModID, "glow_stick"),
@@ -32,8 +34,16 @@ public class ExampleMod implements ModInitializer {
 			.trackRangeBlocks(10).trackedUpdateRate(10) // necessary for all thrown projectiles (as it prevents it from breaking, lol)
 			.build() // VERY IMPORTANT DONT DELETE FOR THE LOVE OF GOD PSLSSSSSS
 	);
-
-	public static final Item GLOW_STICK = Registry.register(Registries.ITEM, new Identifier("tutorial", "custom_item"), new GlowStick(new FabricItemSettings()));
+	public static final Item GLOW_STICK = Registry.register(
+		Registries.ITEM,
+		new Identifier("tutorial", "custom_item"),
+		new GlowStick(new FabricItemSettings())
+	);
+	public static final Block GLOW_STICK_BLOCK = Registry.register(
+		Registries.BLOCK,
+		new Identifier("tutorial", "example_block"),
+		new Block(FabricBlockSettings.create().strength(0.1f, 1.0f))
+	);
 
 	@Override
 	public void onInitialize() {
