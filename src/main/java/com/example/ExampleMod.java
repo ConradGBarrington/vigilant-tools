@@ -17,10 +17,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ExampleMod implements ModInitializer {
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final String ModID = "projectiletutorial"; // This is just so we can refer to our ModID easier.
+	public static final String ModID = "projectiletutorial";
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(ModID);
 
@@ -32,7 +29,7 @@ public class ExampleMod implements ModInitializer {
 		FabricEntityTypeBuilder.<GlowStickEntity>create(SpawnGroup.MISC, GlowStickEntity::new)
 			.dimensions(EntityDimensions.fixed(0.25F, 0.25F)) // dimensions in Minecraft units of the projectile
 			.trackRangeBlocks(10).trackedUpdateRate(10) // necessary for all thrown projectiles (as it prevents it from breaking, lol)
-			.build() // VERY IMPORTANT DONT DELETE FOR THE LOVE OF GOD PSLSSSSSS
+			.build()
 	);
 	public static final Item GLOW_STICK = Registry.register(
 		Registries.ITEM,
@@ -42,7 +39,7 @@ public class ExampleMod implements ModInitializer {
 	public static final Block GLOW_STICK_BLOCK = Registry.register(
 		Registries.BLOCK,
 		new Identifier("tutorial", "example_block"),
-		new GlowStickBlock(FabricBlockSettings.create().strength(0.1f, 1.0f))
+		new GlowStickBlock(FabricBlockSettings.create().strength(0.1f, 1.0f).nonOpaque().luminance(14).notSolid())
 	);
 
 	@Override
