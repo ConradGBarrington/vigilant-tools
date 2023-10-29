@@ -42,7 +42,7 @@ public class ExampleMod implements ModInitializer {
 	public static final Block GLOW_STICK_BLOCK = Registry.register(
 		Registries.BLOCK,
 		new Identifier("tutorial", "example_block"),
-		new Block(FabricBlockSettings.create().strength(0.1f, 1.0f))
+		new GlowStickBlock(FabricBlockSettings.create().strength(0.1f, 1.0f))
 	);
 
 	@Override
