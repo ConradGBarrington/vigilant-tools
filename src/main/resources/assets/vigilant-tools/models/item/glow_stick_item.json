@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tutorial:item/custom_item"
+    "layer0": "vigilant-tools:item/glow_stick_item"
   }
 }

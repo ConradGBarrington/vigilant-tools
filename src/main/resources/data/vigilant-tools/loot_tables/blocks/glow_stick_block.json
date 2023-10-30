@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tutorial:custom_item"
+          "name": "vigilant-tools:glow_stick_item"
         }
       ],
       "conditions": [

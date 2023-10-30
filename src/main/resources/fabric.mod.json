@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "vigilant-tools",
 	"version": "${version}",
 	"name": "Example mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
@@ -12,20 +12,20 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/modid/icon.png",
+	"icon": "assets/vigilant-tools/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.vigilant.tools.ExampleMod"
+			"com.vigilant.tools.VigilantToolsMod"
 		],
 		"client": [
-			"com.vigilant.tools.ExampleModClient"
+			"com.vigilant.tools.VigilantToolsModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
+		"vigilant-tools.mixins.json",
 		{
-			"config": "modid.client.mixins.json",
+			"config": "vigilant-tools.client.mixins.json",
 			"environment": "client"
 		}
 	],
@@ -35,7 +35,5 @@
 		"java": ">=17",
 		"fabric-api": "*"
 	},
-	"suggests": {
-		"another-mod": "*"
-	}
+	"suggests": {}
 }

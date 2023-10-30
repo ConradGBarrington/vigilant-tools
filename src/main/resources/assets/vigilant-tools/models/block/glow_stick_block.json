@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/template_torch",
   "textures": {
-    "torch": "tutorial:block/example_block"
+    "torch": "vigilant-tools:block/glow_stick_block"
   }
 }

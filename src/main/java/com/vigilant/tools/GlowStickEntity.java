@@ -24,7 +24,7 @@ import net.minecraft.world.World;
 
 public class GlowStickEntity extends ThrownItemEntity {
 
-	public static final String ModID = "projectiletutorial"; // This is just so we can refer to our ModID easier.
+	public static final String ModID = "vigilant-tools"; // This is just so we can refer to our ModID easier.
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(ModID);
 
@@ -34,16 +34,16 @@ public class GlowStickEntity extends ThrownItemEntity {
 	}
  
 	public GlowStickEntity(World world, LivingEntity owner) {
-		super(ExampleMod.GlowStickEntityType, owner, world);
+		super(VigilantToolsMod.GlowStickEntityType, owner, world);
 	}
  
 	public GlowStickEntity(World world, double x, double y, double z) {
-		super(ExampleMod.GlowStickEntityType, x, y, z, world);
+		super(VigilantToolsMod.GlowStickEntityType, x, y, z, world);
 	}
   
   @Override
 	protected Item getDefaultItem() {
-		return ExampleMod.GLOW_STICK;
+		return VigilantToolsMod.GLOW_STICK;
 	}
 
   
@@ -107,7 +107,7 @@ public class GlowStickEntity extends ThrownItemEntity {
 				}
 
 				if (world.canPlace(world.getBlockState(blockPosition), blockPosition, ShapeContext.absent())) {
-					world.setBlockState(blockPosition, ExampleMod.GLOW_STICK_BLOCK.getDefaultState());
+					world.setBlockState(blockPosition, VigilantToolsMod.GLOW_STICK_BLOCK.getDefaultState());
 				} else {
 					drop(world);
 				}

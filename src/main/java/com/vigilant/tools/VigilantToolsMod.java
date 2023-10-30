@@ -16,8 +16,8 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class ExampleMod implements ModInitializer {
-	public static final String ModID = "projectiletutorial";
+public class VigilantToolsMod implements ModInitializer {
+	public static final String ModID = "vigilant-tools";
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(ModID);
 
@@ -33,12 +33,12 @@ public class ExampleMod implements ModInitializer {
 	);
 	public static final Item GLOW_STICK = Registry.register(
 		Registries.ITEM,
-		new Identifier("tutorial", "custom_item"),
+		new Identifier("vigilant-tools", "glow_stick_item"),
 		new GlowStick(new FabricItemSettings())
 	);
 	public static final Block GLOW_STICK_BLOCK = Registry.register(
 		Registries.BLOCK,
-		new Identifier("tutorial", "example_block"),
+		new Identifier("vigilant-tools", "glow_stick_block"),
 		new GlowStickBlock(FabricBlockSettings.create().strength(0.1f, 1.0f).nonOpaque().luminance(14))
 	);
 
