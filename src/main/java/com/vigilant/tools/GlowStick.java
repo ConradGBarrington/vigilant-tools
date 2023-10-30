@@ -1,4 +1,4 @@
-package com.example;
+package com.vigilant.tools;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

@@ -1,4 +1,4 @@
-package com.example;
+package com.vigilant.tools;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;

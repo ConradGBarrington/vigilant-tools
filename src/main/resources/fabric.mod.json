@@ -16,10 +16,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.ExampleMod"
+			"com.vigilant.tools.ExampleMod"
 		],
 		"client": [
-			"com.example.ExampleModClient"
+			"com.vigilant.tools.ExampleModClient"
 		]
 	},
 	"mixins": [

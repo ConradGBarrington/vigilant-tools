@@ -1,4 +1,4 @@
-package com.example;
+package com.vigilant.tools;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
