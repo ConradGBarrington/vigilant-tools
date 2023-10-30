@@ -1,15 +1,15 @@
 {
 	"schemaVersion": 1,
 	"id": "vigilant-tools",
-	"version": "${version}",
-	"name": "Example mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"version": "0.0.1",
+	"name": "Vigilant Tools",
+	"description": "Vigilant Tools is focused on extending vanilla minecraft with more variety of tools and weapons.",
 	"authors": [
-		"Me!"
+		"LordOfVigilance"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "",
+		"sources": "https://github.com/ConradGBarrington/vigilant-tools"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/vigilant-tools/icon.png",
