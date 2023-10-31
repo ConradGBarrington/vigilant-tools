@@ -1,7 +1,29 @@
 {
   "variants": {
-    "": {
+    "facing=up": {
       "model": "vigilant-tools:block/glow_stick_block"
+    },
+    "facing=down": {
+      "model": "vigilant-tools:block/glow_stick_block",
+      "x": 180
+    },
+    "facing=north": {
+      "model": "vigilant-tools:block/glow_stick_block",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "vigilant-tools:block/glow_stick_block",
+      "x": 90,
+      "y": 90
+    },
+    "facing=south": {
+      "model": "vigilant-tools:block/glow_stick_block",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "vigilant-tools:block/glow_stick_block",
+      "x": 270,
+      "y": 90
     }
   }
 }

@@ -17,7 +17,6 @@ import net.minecraft.particle.ItemStackParticleEffect;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -65,16 +64,7 @@ public class GlowStickEntity extends ThrownItemEntity {
 		}
  
 	}
- 
-	protected void onEntityHit(EntityHitResult entityHitResult) { // called on entity hit.
-		super.onEntityHit(entityHitResult);
-		World world = this.getWorld();
 
-		if (!world.isClient) { // checks if the world is client
-
-		}
-	}
- 
 	protected void onCollision(HitResult hitResult) { // called on collision with a block
 		super.onCollision(hitResult);
     World world = this.getWorld();
@@ -107,7 +97,7 @@ public class GlowStickEntity extends ThrownItemEntity {
 				}
 
 				if (world.canPlace(world.getBlockState(blockPosition), blockPosition, ShapeContext.absent())) {
-					world.setBlockState(blockPosition, VigilantToolsMod.GLOW_STICK_BLOCK.getDefaultState());
+					world.setBlockState(blockPosition, ((GlowStickBlock)VigilantToolsMod.GLOW_STICK_BLOCK).getRemotePlacementState(world, blockPosition, blockHitResult.getSide()));
 				} else {
 					drop(world);
 				}
