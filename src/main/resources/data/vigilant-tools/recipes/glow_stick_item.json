@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  O",
+        " T ",
+        "S  "
+    ],
+    "key": {
+        "S": {
+            "item": "minecraft:slime_ball"
+        },
+        "T": {
+            "item": "minecraft:stick"
+        },
+        "O": {
+            "item": "minecraft:glow_berries"
+        }
+    },
+    "result": {
+        "item": "vigilant-tools:glow_stick_item",
+        "count": 4
+    }
+}
