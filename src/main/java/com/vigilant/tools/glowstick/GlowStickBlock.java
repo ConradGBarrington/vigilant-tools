@@ -77,10 +77,12 @@ public class GlowStickBlock extends FacingBlock implements Waterloggable{
       .with(FACING, direction);
   }
   
+  @SuppressWarnings("deprecation")
   public FluidState getFluidState(BlockState state) {
     return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
   }
 
+  @SuppressWarnings("deprecation")
   public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState neighborState, WorldAccess world, BlockPos pos, BlockPos neighborPos) {
     if (state.get(WATERLOGGED)) {
         world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
