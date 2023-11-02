@@ -2,6 +2,7 @@ package com.vigilant.tools.glowstick;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.FacingBlock;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.Waterloggable;
@@ -85,7 +86,7 @@ public class GlowStickBlock extends FacingBlock implements Waterloggable{
         world.scheduleFluidTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(world));
     }
 
-    return super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
+    return direction.getOpposite() == state.get(FACING) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, neighborState, world, pos, neighborPos);
   }
 
 }
