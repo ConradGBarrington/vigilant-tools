@@ -39,7 +39,13 @@ public class VigilantToolsMod implements ModInitializer {
 	public static final Block GLOW_STICK_BLOCK = Registry.register(
 		Registries.BLOCK,
 		new Identifier("vigilant-tools", "glow_stick_block"),
-		new GlowStickBlock(FabricBlockSettings.create().strength(0.1f, 1.0f).nonOpaque().luminance(14))
+		new GlowStickBlock(
+			FabricBlockSettings.create()
+				.strength(0.1f, 1.0f)
+				.nonOpaque()
+				.luminance(14)
+				.collidable(false)
+		)
 	);
 
 	@Override
