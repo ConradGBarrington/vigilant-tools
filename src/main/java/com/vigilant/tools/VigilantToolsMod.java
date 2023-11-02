@@ -16,6 +16,10 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.vigilant.tools.glowstick.GlowStick;
+import com.vigilant.tools.glowstick.GlowStickBlock;
+import com.vigilant.tools.glowstick.GlowStickEntity;
+
 public class VigilantToolsMod implements ModInitializer {
 	public static final String ModID = "vigilant-tools";
 

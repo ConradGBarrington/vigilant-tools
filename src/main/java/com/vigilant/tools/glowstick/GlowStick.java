@@ -1,4 +1,4 @@
-package com.vigilant.tools;
+package com.vigilant.tools.glowstick;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

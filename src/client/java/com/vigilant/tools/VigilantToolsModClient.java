@@ -1,5 +1,7 @@
 package com.vigilant.tools;
 
+import com.vigilant.tools.glowstick.GlowStickEntity;
+
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;

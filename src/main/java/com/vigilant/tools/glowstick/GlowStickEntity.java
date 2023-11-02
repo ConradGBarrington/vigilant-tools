@@ -1,7 +1,9 @@
-package com.vigilant.tools;
+package com.vigilant.tools.glowstick;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.vigilant.tools.VigilantToolsMod;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
