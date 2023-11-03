@@ -15,7 +15,7 @@
     "#"
   ],
   "result": {
-    "item": "minecraft:wooden_dagger"
+    "item": "vigilant-tools:wooden_dagger_item"
   },
   "show_notification": true
 }

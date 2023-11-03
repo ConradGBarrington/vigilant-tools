@@ -15,7 +15,7 @@
     "#"
   ],
   "result": {
-    "item": "minecraft:stone_dagger"
+    "item": "vigilant-tools:stone_dagger_item"
   },
   "show_notification": true
 }

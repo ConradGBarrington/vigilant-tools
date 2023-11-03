@@ -15,7 +15,7 @@
     "#"
   ],
   "result": {
-    "item": "minecraft:gold_dagger"
+    "item": "vigilant-tools:gold_dagger_item"
   },
   "show_notification": true
 }
