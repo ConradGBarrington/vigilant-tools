@@ -12,6 +12,8 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -22,6 +24,7 @@ import org.slf4j.LoggerFactory;
 import com.vigilant.tools.glowstick.GlowStick;
 import com.vigilant.tools.glowstick.GlowStickBlock;
 import com.vigilant.tools.glowstick.GlowStickEntity;
+import com.vigilant.weapons.dagger.DaggerItem;
 
 public class VigilantToolsMod implements ModInitializer {
 	public static final String ModID = "vigilant-tools";
@@ -53,6 +56,38 @@ public class VigilantToolsMod implements ModInitializer {
 				.luminance(14)
 				.collidable(false)
 		)
+	);
+
+	//Dagger
+	public static final Item WOODEN_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "wooden_dagger_item"),
+		new DaggerItem(ToolMaterials.WOOD, 2, 2.0f, new FabricItemSettings()) 
+	);
+	public static final Item STONE_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "stone_dagger_item"),
+		new DaggerItem(ToolMaterials.STONE, 2, 2.0f, new FabricItemSettings()) 
+	);
+	public static final Item IRON_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "iron_dagger_item"),
+		new DaggerItem(ToolMaterials.IRON, 2, 2.0f, new FabricItemSettings()) 
+	);
+	public static final Item GOLD_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "gold_dagger_item"),
+		new DaggerItem(ToolMaterials.GOLD, 2, 2.0f, new FabricItemSettings()) 
+	);
+	public static final Item DIAMOND_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "diamond_dagger_item"),
+		new DaggerItem(ToolMaterials.DIAMOND, 2, 2.0f, new FabricItemSettings()) 
+	);
+	public static final Item NETHERITE_DAGGER = Registry.register(
+		Registries.ITEM,
+		new Identifier("vigilant-tools", "netherite_dagger_item"),
+		new DaggerItem(ToolMaterials.NETHERITE, 2, 2.0f, new FabricItemSettings()) 
 	);
 
 	@Override
