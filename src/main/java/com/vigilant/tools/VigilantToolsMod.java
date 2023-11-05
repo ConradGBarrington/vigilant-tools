@@ -12,7 +12,6 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -58,7 +57,7 @@ public class VigilantToolsMod implements ModInitializer {
 		)
 	);
 
-	//Dagger
+	//Daggers
 	public static final Item WOODEN_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "wooden_dagger_item"),
