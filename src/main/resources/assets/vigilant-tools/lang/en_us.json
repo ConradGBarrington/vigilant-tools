@@ -1,3 +1,9 @@
 {
-    "item.vigilant-tools.glow_stick_item": "Glow Stick"
+    "item.vigilant-tools.glow_stick_item": "Glow Stick",
+    "item.vigilant-tools.wooden_dagger_item": "Wooden Dagger",
+    "item.vigilant-tools.stone_dagger_item": "Stone Dagger",
+    "item.vigilant-tools.iron_dagger_item": "Iron Dagger",
+    "item.vigilant-tools.gold_dagger_item": "Gold Dagger",
+    "item.vigilant-tools.diamond_dagger_item": "Diamond Dagger",
+    "item.vigilant-tools.netherite_dagger_item": "Netherite Dagger"
 }

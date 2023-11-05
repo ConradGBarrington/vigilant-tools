@@ -61,32 +61,32 @@ public class VigilantToolsMod implements ModInitializer {
 	public static final Item WOODEN_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "wooden_dagger_item"),
-		new DaggerItem(ToolMaterials.WOOD, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.WOOD, 2, -1.5f, new FabricItemSettings()) 
 	);
 	public static final Item STONE_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "stone_dagger_item"),
-		new DaggerItem(ToolMaterials.STONE, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.STONE, 2, -1.5f, new FabricItemSettings()) 
 	);
 	public static final Item IRON_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "iron_dagger_item"),
-		new DaggerItem(ToolMaterials.IRON, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.IRON, 2, -1.5f, new FabricItemSettings()) 
 	);
 	public static final Item GOLD_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "gold_dagger_item"),
-		new DaggerItem(ToolMaterials.GOLD, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.GOLD, 2, -1.5f, new FabricItemSettings()) 
 	);
 	public static final Item DIAMOND_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "diamond_dagger_item"),
-		new DaggerItem(ToolMaterials.DIAMOND, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.DIAMOND, 2, -1.5f, new FabricItemSettings()) 
 	);
 	public static final Item NETHERITE_DAGGER = Registry.register(
 		Registries.ITEM,
 		new Identifier("vigilant-tools", "netherite_dagger_item"),
-		new DaggerItem(ToolMaterials.NETHERITE, 2, 2.0f, new FabricItemSettings()) 
+		new DaggerItem(ToolMaterials.NETHERITE, 2, -1.5f, new FabricItemSettings()) 
 	);
 
 	@Override
@@ -100,5 +100,15 @@ public class VigilantToolsMod implements ModInitializer {
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
 			content.addAfter(Items.TORCH, GLOW_STICK);
 		});
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(content -> {
+			// Add in reverse order because they're added afther the netherite sword not each other
+			content.addAfter(Items.NETHERITE_SWORD, NETHERITE_DAGGER);
+			content.addAfter(Items.NETHERITE_SWORD, DIAMOND_DAGGER);
+			content.addAfter(Items.NETHERITE_SWORD, GOLD_DAGGER);
+			content.addAfter(Items.NETHERITE_SWORD, IRON_DAGGER);
+			content.addAfter(Items.NETHERITE_SWORD, STONE_DAGGER);
+			content.addAfter(Items.NETHERITE_SWORD, WOODEN_DAGGER);
+		});
+
 	}
 }
